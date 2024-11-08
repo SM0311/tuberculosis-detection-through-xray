@@ -29,11 +29,9 @@ def predict_single_image(image_arr, model):
     
     prediction = model.predict(image)
 
-    print(prediction)
     # Calculate probabilities
     prediction_probability = prediction[0][0]  # Assuming binary classification output
     predicted_class_name = 'TB Detected' if prediction_probability > 0.5 else 'TB Not Detected'
     prediction_class = prediction_probability if prediction_probability >= 0.5 else (1-prediction_probability)
 
-    print(prediction_class)
     return predicted_class_name, prediction_class
