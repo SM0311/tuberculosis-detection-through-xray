@@ -1,29 +1,8 @@
 # Tuberculosis Detection Through XRay
-This is an Omdena project for Pune India local chapter - Early Detection of Tuberculosis
 
 ## Overview
-This repository contains a deep learning model built using Keras to classify chest X-ray images as either "TB Positive" or "TB Negative." The model utilizes a pre-trained ResNet50 architecture for feature extraction and is fine-tuned on a custom dataset.
+This is an Omdena project for Pune India local chapter - Early Detection of Tuberculosis.
 
-## Dataset
-The dataset consists of:
-- **TB Images**: 800 images labeled as positive for tuberculosis.
-- **Non-TB Images**: 3800 images labeled as negative for tuberculosis.
-
-### Data Splitting
-The dataset is divided into:
-- **Training Set**: 70% of the data
-- **Validation Set**: 20% of the data
-- **Test Set**: 10% of the data
-
-### Directory Structure
-The data is organized into the following directory structure:
-ChatGPT
-
-Here's the README content formatted in Markdown for your file:
-
-# TB Classification Model README
-
-## Overview
 This repository contains a deep learning model built using TensorFlow and Keras to classify chest X-ray images as either "TB Positive" or "TB Negative." The model utilizes a pre-trained ResNet50 architecture for feature extraction and is fine-tuned on a custom dataset.
 
 ## Dataset
