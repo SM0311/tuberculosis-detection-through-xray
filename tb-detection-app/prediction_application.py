@@ -82,11 +82,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-
+script_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Function to get list of image files from a directory (case insensitive)
 def get_image_options(path):
-    script_directory = os.path.dirname(os.path.abspath(__file__))
     total_path = os.path.join(script_directory, path)
 
     image_extensions = ['jpg', 'jpeg', 'png']
@@ -120,7 +119,8 @@ def display_prediction(prediction, confidence):
 
 # Function to display prediction insights on Streamlit
 def display_post_prediction_insights(prediction):
-    post_pred_info_path = 'src/prediction/post-prediction-info.yaml'
+    path = 'src/prediction/post-prediction-info.yaml'
+    post_pred_info_path = os.path.join(script_directory, path)
     try:
         with open(post_pred_info_path,'r') as f:
             data = yaml.safe_load(f)
@@ -189,7 +189,8 @@ def main():
     if uploaded_file is not None:
         image = load_img(uploaded_file, target_size=(IMAGE_HEIGHT, IMAGE_WIDTH))
     elif selected_image is not None:
-        image_path = os.path.join('examples', selected_image)
+        
+        image_path = os.path.join(script_directory,'examples', selected_image)
         image = load_img(image_path, target_size=(IMAGE_HEIGHT, IMAGE_WIDTH))
     else:
         st.write("No image available.")
@@ -204,7 +205,7 @@ def main():
     prediction_probability = None
 
     if st.button("Predict"):
-        file_path = glob.glob(os.path.join("src/models", "*.h5"))[0]
+        file_path = glob.glob(os.path.join(script_directory,"src/models", "*.h5"))[0]
 
         # Load the model
         model = load_model(file_path)
@@ -214,7 +215,7 @@ def main():
 
 
         # Predict disease and prediction probability
-        prediction, prediction_probability = predict_single_image1(image_arr=image_array, model=model)
+        prediction, prediction_probability = predict_single_image(image_arr=image_array, model=model)
         if prediction == 'Unknown':
             st.error(" ⚠️ Unable to identify, Please upload another image ")
             prediction = None
