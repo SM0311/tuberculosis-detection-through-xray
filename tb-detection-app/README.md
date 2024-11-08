@@ -15,7 +15,7 @@ This project is a web application that leverages machine learning techniques to 
 
 You can use the application directly at the following link:
 
-[TB Detection X-Ray Image App](https://tb-detection-using-xray-images.streamlit.app/prediction_application)
+[TB Detection X-Ray Image App](https://tuberculosis-detection-through-xray.streamlit.app/prediction_application)
 
 ### Steps to Use the Application:
 
