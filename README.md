@@ -1,10 +1,11 @@
 # Tuberculosis Detection Through XRay
 
-App hosted - [link](https://tuberculosis-detection-through-xray.streamlit.app)
+Hosted App - [link](https://tuberculosis-detection-through-xray.streamlit.app)
 ## Overview
 This is an Omdena project for Pune India local chapter - Early Detection of Tuberculosis.
 
-This repository contains a deep learning model built using TensorFlow and Keras to classify chest X-ray images as either "TB Positive" or "TB Negative." The model utilizes a pre-trained ResNet50 architecture for feature extraction and is fine-tuned on a custom dataset.
+- This repository contains a deep learning model built using TensorFlow and Keras to classify chest X-ray images as either "TB Positive" or "TB Negative."  The model utilizes a pre-trained ResNet50 architecture for feature extraction and is fine-tuned on a custom dataset.
+- Repository also has a webApp made using Streamlit which utilizes the model to make predictions on unseen XRay images.
 
 ## Dataset
 The dataset consists of:
