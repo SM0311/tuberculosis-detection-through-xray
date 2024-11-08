@@ -1,5 +1,6 @@
 # Tuberculosis Detection Through XRay
 
+App hosted - [link](https://tuberculosis-detection-through-xray.streamlit.app)
 ## Overview
 This is an Omdena project for Pune India local chapter - Early Detection of Tuberculosis.
 
